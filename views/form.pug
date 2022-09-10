@@ -2,7 +2,10 @@ extends layout
 
 block content
   h1= title 
+  a(href="/")= "Back to messages"
   form(method="POST" action="/new") 
-    input(type="text" name="messageUser" placeholder="J. Jonah Jameson")
-    input(type="text" name='messageText' placeholder="That darned spider!")
-    input(type="submit")
+    label(for="messageUser")= "Name:"
+    input(class="input input-text" type="text" name="messageUser" placeholder="J. Jonah Jameson")
+    label(for="messageText")= "Messsage:"
+    textarea(class="input input-textarea" type="text" name='messageText' placeholder="That darned spider!")
+    input(class="submit" type="submit")
