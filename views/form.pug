@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title 
+  form(method="POST" action="/new") 
+    input(type="text" name="messageUser" placeholder="J. Jonah Jameson")
+    input(type="text" name='messageText' placeholder="That darned spider!")
+    input(type="submit")

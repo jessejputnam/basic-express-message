@@ -1,0 +1,12 @@
+extends layout
+
+//- messages array
+
+block content
+  h1= title
+  a(href="/new") Add a message
+  div(class="messages_container")
+    each message in messages
+      div(class="message_box")
+        h6(class="header")= message.user + " " + "(" + message.added + ")"
+        p(class="message")= message.text
